@@ -1,0 +1,13 @@
+{
+  "ver": "1.2.0",
+  "importer": "directory",
+  "imported": true,
+  "uuid": "924b03c3-5c60-4109-a688-69dccbcbe248",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "isBundle": true,
+    "bundleName": "ui",
+    "bundleConfigID": "auto_31jC+kJORI26eOSG0AfDx0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "__version__": "1.0.6",
+  "custom_joint_texture_layouts": [],
+  "general": {
+    "designResolution": {
+      "width": 960,
+      "height": 640
+    }
+  },
+  "script": {
+    "preserveSymlinks": true
+  }
+}

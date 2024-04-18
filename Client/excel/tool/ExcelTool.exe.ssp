@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ssprotect>
+	<file>
+		<path type="string">F:\Work\mzj_work\tools\ExcelToJavaCSDB\bin\Debug\ExcelTool.ssp.exe</path>
+	</file>
+	<option>
+		<mix type="bool">1</mix>
+		<zip type="bool">1</zip>
+	</option>
+	<plugin>
+		<ds enable="0">
+			<x86 file="ss_res_protect_x86.dll"></x86>
+			<x64 file="ss_res_protect_x64.dll"></x64>
+			<option>
+				<pwd type="password">AF1933D745FA06F32EE47F4EA68792A1</pwd>
+			</option>
+		</ds>
+	</plugin>
+	<function>
+		<Program type="class">
+			<Main type="function">
+				<flags>8</flags>
+			</Main>
+		</Program>
+	</function>
+	<base_info>
+		<app>Virbox Protector Standalone</app>
+		<version>1.3.0.9079</version>
+	</base_info>
+</ssprotect>

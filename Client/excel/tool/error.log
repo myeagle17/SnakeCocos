@@ -1,0 +1,246 @@
+DROP TABLE IF EXISTS `star_excel_1`.`t_excel_common_config`;
+
+CREATE TABLE t_excel_common_config (id varchar(100),int_value int(11),string_value varchar(3000),PRIMARY KEY (`id`));
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('max_create_role',6,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('itme_BagMix',300,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('island_landing',2500,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('floater_loading',1500,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('portal_loading',2000,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('equipLevel_enhanceLevel',0,'1,5|10,10|20,20|30,30|40,40|50,50|60,60');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('max_prop_num',0,'1,4,0|5,14,1|15,24,2|25,34,3|35,100,4');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('max_prop_level',4,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('enhancelevel_to_prop_num',0,'1,4,0|5,14,1|15,24,2|25,34,3|35,100,4');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('role_bag_tab_content',0,'2,3,4|2|3|4');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('explore_levelMax',10,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('role_levelMax',60,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('new_player_chapter',100001,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('new_player_item',0,'700401003,1|700601003,1|701601001,1|70001,1|70002,1|70003,1|70005,1|70006,1|70007,1|70008,1|70009,1|70010,1|70011,1|70012,1|70013,1|70014,1|70015,1|70016,1|70017,1|70018,1|70019,1|70020,1|70021,1|70022,1|70023,1|70024,1|70025,1|70026,1|70027,1|70028,1|70029,1|70030,1|70031,1|70032,1|70033,1|70034,1|70035,1|70036,1|70037,1|70038,1|70039,1|70040,1|70041,1|70042,1|70043,1|70044,1|70045,1|70046,1|70047,1|70048,1|70049,1|70050,1|70051,1|70052,1|70053,1|70054,1|70055,1|70056,1|70057,1|70058,1|70059,1|70060,1|70061,1|70062,1|70063,1|70064,1|70065,1|70066,1|70067,1|70068,1|70069,1|70070,1|70071,1|70072,1|70073,1|70074,1|70075,1|70076,1|70077,1|70078,1|70079,1|70080,1');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('new_player_equip',0,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('new_player_shenqi',0,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('new_player_talent',0,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('new_player_quest',1001,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('copies_per',0,'10,30|20,40');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('unlock_soulpower',0,'0,10,1|11,13,2|14,16,3|17,19,4|20,22,5|23,25,6|26,28,7|29,31,8|32,34,9|35,100,10');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('talent_max_level',10,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('unlock_talent',0,'0,13,1|14,15,2|16,17,3|18,19,4|20,21,5|22,24,6|25,27,7|28,30,8|31,33,9|34,100,10');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('advanced_talent',0,'30002');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('collisionPickup_itemType',0,'2001,6001');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('rangeDraw_distance',8,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('rangeDraw_stayTime',1000,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('mail_para',0,'99,5,20,200');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('monster_deadTime',0,'500,1000,2000');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('monster_fadeTime',0,'500');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('role_init_appearance',0,'101011,101012,101013,101014,101015,101016');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('heartbeat_time',0,'5,25,1,10');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('createrole_time',10,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('kickoff_time',0,'30,60');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('bagfull_mail',0,'3,3');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('role_equip_level',0,'1,9,1|10,19,10|20,29,20|30,39,30|40,49,40|50,59,50|60,100,60');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('role_delete_time',5,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('redDot_delayTime',3,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('resurrection_max',1,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('role_energy_initial',20,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('role_energy_max',20,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('role_energy_recover',15,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('resurrection_consume',5,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('ad_time',5,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('role_energy_ad',10,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('role_diamonds_ad',20,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('is_heart_beat',0,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('island_level',6,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('npc_radius',0,'3,5');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('npc_talk',0,'10,15,3');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('shop_refresh_day',1,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('shop_refresh_time',0,'00:00:00');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('draw_maxlimit',100,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('drop_id_range',0,'1,9999|10000,99999');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('Initial_island',0,'998,998001');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('Dodge',0,'100|2000');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('drop_equip_type',0,'2101,2102,2201,2301,2401,2501,2601,2701,2801');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('city_back_sea',0,'1.6,0,-1.6');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('equipisland_drop_min',2,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('equip_virtual_type',2000,'2101,2102,2201,2301,2401,2501,2601,2701,2801');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('death_drop',200110101,'200110101,200110103,200110106,200110107,200110110,60006,60105,60106');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('quality_fx',0,'2,3,5,8');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('gold_share',0,'10,30,5|31,50,10|51,100,20|101,100000,30');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('soul_share',0,'10,30,10|31,50,20|51,100,30|101,150,40|151,1000,50');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('equip_sort',0,'level,1|quality,1|typeId_sub,0|drop_type,0');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('send_mail',0,'5,10');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('explore_exp_drop',0,'1,12,50');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('explore_exp_limit',0,'100,200,300,150');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('mutex_window',0,'UIRareFirstShow,UIQuestGift,UIStageReward,UICommonGift,UILevelUp');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('cant_pop_up',0,'UIGuide,UIEquipStrengthen,UIArtifact');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('elf_feed',6000,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('quality_android',4,'6000,8000,2000,4000');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('quality_ios',2,'4000,8000,2000,4000');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('initial_three_weapons',0,'210210101,210210105,210210106');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('singleChat_charLimit',0,'64');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('chatChannel_textLimit',0,'1,50|2,30|4,100');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('chest_refresh',0,'35,10');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('default_meta',0,'1003,1|1,10000|2,10000|3,10000');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('default_galaxy',101,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('galaxy_nbfs_param',0,'22,40,80,0.1,1.6');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('default_player_planet',0,'10001,10002,10003');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('drop_disappear_times',100,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('initial_appearance',1000406,'20100001,20200001');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('cannot_remove_appearance',0,'101,102,103,104,106,107,108,109,110,111,112,113,114,115');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('reload_time',60,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('name_begin',10000000,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('backtrack_num',10,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('name_show_range',30,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('default_rental_planet',10101,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('building_syetemConst',0,'1,30,30');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('company_message',0,'100,100');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('company_certification_items',0,'10002,20000');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('attest_word_length',30,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('default_logo',4000024,null);
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('live_param',0,'2,200');
+
+INSERT INTO `star_excel_1`.`t_excel_common_config` VALUES ('greement_text',0,'特别提示
+ 感谢您阅读“亿万行星”平台《用户协议》（以下称“本协议")并使用“亿万行星"平台（以下称“平台"）提供的各项服务。您在申请注册成为平台用户之前,应当认真阅读本协议。且您务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款、法律适用和争议解决条款。免除或者限制责任的条款,您应重点阅读.您的注册、登录、使用等行为将视为对本协议的接受，并同意接受本协议各项条款的约束。如您对协议有任何疑问，可向平台客服咨询.
+用户在仔细阅读并同意所有服务条款完成注册程序后，即时成为平台的正式用户.本注册协议自用户注册成功之日起，在用户与平台之间发生法律效力。
+一、帐号使用
+ 您有权使用您设置或确认的平台用户名、手机号码（以下简称“账户名称"）及您设置的密码（账户名称及密码合称“账户”）登录平台，并在登陆后对账户信息进行修改（手机号码除外）.
+由于用户账户关联用户信用信息,用户未经平台同意不得自行转让账户。您的账户未经平台同意进行转让的，该账户项下产生的权利义务内容视为账户关联用户自行操作并已认可。由此产生的一切责任均由账户关联用户自行承担。
+作为平台的经营者，法律并未赋予平台强制要求所有用户进行实名认证的权利，但为使您更好地了解平台展示的项目信息，并享受平台提供的各项服务，平台建议您按照平台要求及我国法律规定完成实名认证。
+二、注册信息的管理
+ （一）用户需向平台提供您的身份信息(包括但不限于您的姓名、关联银行卡号、联系电话、联系地址等）以及财产、收入证明,并保证信息的真实性、完整性、及时性。因信息不真实、不完整或信息变更后未及时通知平台,导致的一切后果，用户应自行承担责任.
+ (二）您的账户由您自行设置并保管，平台任何时候均不会主动要求您提供您的账户信息.请您务必保管好您的账户，因您主动泄露或遭受他人攻击、诈骗等行为导致的损失及后果，均由您自行承担。
+三、平台的权利与义务
+ (一)平台有权自己或委托第三方对用户进行实名认证和资格审核，并对用户信息的真实性进行必要的形式审查.平台有权拒绝不符合法律法规及平台要求的用户进行注册或取消已注册用户的用户资格。
+ （二）平台有权使用用户资料并承诺对用户信息采取对外保密措施，不向任何第三方披露用户资料，不授权第三方使用用户资料,除非：
+ 1.依据法律法规的规定应当提供；
+ 2.行政、司法机关要求平台提供；
+ 3.用户授权平台向第三方提供;
+ 4.用户在平台上完成相关项目投资后需向项目方提供相关信息；
+ 5.用户在发布信息时透露相关信息。
+ (三)在用户违反国家、地方法律法规规定或违反平台相关规则及要求的情况下，平台拥有包括但不限于随时中止、终止对用户提供部分或全部服务并停用其用户帐号的权利。在该情况下，平台对由此产生的损失不承担任何责任。
+四、用户权利和义务
+ （一）用户声明并承诺其为具有完全民事行为能力的自然人，或为依据中国法律设立并有效存续的公司或企业或其他形式的组织，具有一切必要的权利和能力订立、履行本协议下的任何义务和责任。
+ （二）用户有权拥有自己在平台的用户名和密码并有权使用自己的用户名和密码随时登录平台。用户在其权限内有权进行发布信息、对接需求、资金划转等平台提供的相关服务。
+ （三）用户保证其使用平台提供的服务时将遵守国家、地方法律法规、遵从行业惯例和社会公共道德。用户在注册成功后，不会采用任何方式存储、发布、传播损害国家、社会公共利益和涉及国家安全的信息资料或言论，不得发起、参与任何洗钱类项目。因用户上述行为给平台造成损失的，用户应予赔偿.
+ （四）对于用户通过平台发布的涉嫌违法或涉嫌侵犯他人合法权利或违反本协议的信息或资料，平台有权依据其独立判断对该信息或资料予以修改、编辑、删除,而无需事先通知该用户。用户应独立承担由此造成的一切损失和法律责任，并应确保平台免于承担因此产生的任何损失或费用。
+ （五)用户确认并同意，您应自行承担您在使用本平台服务期间通过本平台及本平台关联账户划拨划转的款项，在服务过程中的任何货币贬值、汇率波动及收益损失等风险。您仅在该划拨划转款项（不含被冻结、止付或受限制的款项）的金额范围内享有对该划拨划转款项指令支付、提现的权利。您对所有划拨划转款项（含被冻结、止付或受限制的款项）产生的任何收益（包括但不限于利息和其他孳息）不享有任何权利。本平台就所有该划拨划转款项产生的任何收益(包括但不限利息和其他于孳息)享有所有权。
+ （六)用户承诺并保证其在平台上浏览、发布、参与项目的决定是依据自身判断所作出的独立、审慎的决定,因其使用平台服务产生的风险由其自行承担，并保证依法、依协议的约定履行其相应的义务。
+ (七)因互联网自身属性原因，用户承诺并保证其使用爱微筹平台服务的风险由其自身承诺，其下载或通过爱微筹平台服务取得的信息和资料，由其自身承担系统受损、资料和信息丢失以及其他相关风险。
+五、平台的通知
+用户同意平台会根据用户提供的基础信息以及在平台的投资经历发送以下通知:
+ 1.公示的文案;
+ 2.站内信、微信端推送的消息；
+ 3.根据您预留于平台的联系方式发出的电子邮件、短信、函件等.
+六、隐私声明
+ 本平台重视对用户隐私的保护。关于您的身份信息和其他特定资料,将依据本平台的《隐私政策》进行保护和规范，详情请参阅《隐私政策》。
+七、协议的修改
+ 为更好的为用户提供服务,本平台保留在任何时间自行修改、增删本平台法律文书中任何内容的权利.平台在修改相关内容后，会及时在平台上进行公告。在公告发布后,用户每次登录或使用本平台时均视为同意接受当时有效协议的制约。
+八、本协议的终止
+ （一）如出现以下情形之一的，用户有权终止本协议：
+  1.本平台相关协议及服务条款变更，变更事项生效前您停止使用并明示不愿接受变更事项的；
+  2.您明示不愿继续使用平台服务，且符合平台终止条件的。
+（二）如出现以下情形之一的,平台有权解除本协议：
+ 1.用户违反本协议相关约定,平台依据协议约定终止本协议的；
+ 2.用户参与涉赌、涉黄、套现、洗钱、诈骗及其他违法违规活动；
+ 3.用户未通过网站提供真实有效的联系方式，且平台在5个工作日内无法联系到该用户；
+ 4.用户损害平台名誉,散播不利于平台的言论,或对其他客户、项目方和银行做出不诚实或欺骗的行为；
+ 5.平台收到行政、司法等权力机关出具的要求终止用户资格的书面通知.
+九、不可抗力及免责条款
+ (一)由于发生地震、台风、水灾、火灾等人力不能预见、不能避免、不能克服的不可抗力事件，致使协议无法履行或不能按约定履行,遭遇不可抗力的一方应于不可抗力发生之日起3个工作日内以书面形式通知对方，并于发生后10个工作日内出具有关部门的证明文件。因不可抗力造成的损失,双方互不承担责任.不可抗力事由消失后双方应在合理期限内协商是否继续履行协议。
+ (二)由于计算机和互联网的特殊性，平台服务过程中可能出现技术性中断、服务延时及安全性问题等(包括但不限于平台系统崩溃或无法正常使用、电信设备故障、网络故障、电力中断、恶意攻击、计算机病毒）。平台用户应了解该类风险内容,若用户因此无法使用平台部分或全部服务的或对用户造成损失的,平台不承担任何责任。
+ （三）平台需要定期或不定期地进行系统维护，平台会在维护前24小时内以平台公告形式及时通知用户，维护期间用户将无法使用部分或全部平台服务，因此对用户造成的损失，平台不承担任何责任。
+十、附则
+ （一）若本协议履行过程中发生争议，双方本着公平公正的态度友好协商解决.协商不成时，任何一方均可向平台所在地人民法院提起诉讼.
+ (二）如本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，本协议的其余条款仍应有效并且有约束力。
+ （三）本协议的订立、执行和解释及争议的解决均应适用中华人民共和国法律.?');
+

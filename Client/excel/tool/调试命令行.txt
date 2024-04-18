@@ -1,0 +1,2 @@
+excel_to_java gm_server  db output map.CqConfig Data
+excel_to_db cq  ./db ./db/cq_data.db
