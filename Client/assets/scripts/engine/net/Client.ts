@@ -1,3 +1,5 @@
+/** @format */
+
 import EventName from "../../logic/const/EventName";
 import { Msg } from "../msg/msg";
 
@@ -7,7 +9,6 @@ export default class Client {
 
     public constructor(url: string) {
         this.url = url;
-
     }
 
     public Connect(onmessage: (event) => void): void {

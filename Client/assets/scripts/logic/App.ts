@@ -1,19 +1,22 @@
-import { _decorator } from 'cc';
-import { Game } from '../engine/Game';
-import ExcelConfig from './data/excel/ExcelConfig';
-import { UIMgr } from '../engine/ui/UIMgr';
-import { UIFormId } from '../engine/ui/UIFormId';
-import { LevelModule } from './module/level/LevelModule';
-import Net from '../engine/net/Net';
-import EventName from './const/EventName';
-import { Msg } from '../engine/msg/msg';
-import NetEvent from './Proto/NetEvent';
-import { LoginProto } from './Proto/Proto';
-import { LoginModule } from './module/Login/LoginModule';
+/** @format */
+
+import { _decorator, Node } from "cc";
+import { Game } from "../engine/Game";
+import ExcelConfig from "./data/excel/ExcelConfig";
+import { UIMgr } from "../engine/ui/UIMgr";
+import { UIFormId } from "../engine/ui/UIFormId";
+import Net from "../engine/net/Net";
+import EventName from "./const/EventName";
+import { Msg } from "../engine/msg/msg";
+import ModuleManager from "./manager/ModuleManager";
+import NetManager from "./manager/NetManager";
+import LevelCtr from "./level/LevelCtr";
 const { ccclass, property } = _decorator;
 
-@ccclass('App')
+@ccclass("App")
 export class App extends Game {
+    @property(Node)
+    public mapNode: Node;
     protected onLoad(): void {
         super.onLoad();
         this.runGame();
@@ -25,18 +28,16 @@ export class App extends Game {
         Msg.on(EventName.EVENT_CLIENT_CONNECT, () => {
             Msg.off(EventName.EVENT_CLIENT_CONNECT, null);
 
-
             ExcelConfig.LoadAll(() => {
-                this.InitModule();
+                this.InitManager();
                 UIMgr.ins().OpenUIForm(UIFormId.UILoginForm, "hello world");
-
-            })
-        })
-
+            });
+        });
     }
 
-    private InitModule(): void {
-        new LoginModule("login");
-        new LevelModule("level");
+    private InitManager(): void {
+        NetManager.Instance().Init();
+        ModuleManager.Instance().Init();
+        LevelCtr.Instance().Init(this.mapNode);
     }
 }

@@ -1,4 +1,6 @@
-import { Camera, Enum, Game, Prefab, director, instantiate,Node } from "cc";
+/** @format */
+
+import { Camera, Enum, Game, Prefab, director, instantiate, Node } from "cc";
 import { BaseClass } from "../pattern/BaseClass";
 import { UIBaseForm } from "./UIBaseForm";
 import { UILayer } from "./UILayer";
@@ -20,56 +22,54 @@ Enum(UIFormLayer);
 export class UIMgr extends BaseClass {
     /** 重载单例*/
     public static ins(): UIMgr {
-        return super.ins() as UIMgr
+        return super.ins() as UIMgr;
     }
     private _uiForms: { [name: string]: UIBaseForm } = {};
-    private _openingForms:Array<string> = new Array<string>();
+    private _openingForms: Array<string> = new Array<string>();
     private _layers: { [layer: string]: UILayer } = {};
     public uinode: Node | undefined | null;
     public panelRoot: Node | undefined;
     public uicamera: Camera | undefined;
     private splashNode: Node | undefined;
-    public hudNode:Node;
+    public hudNode: Node;
     /**
      * 常驻界面
      */
     private _constView: string[];
 
-    private prefix: string = "assets/deer/assetshotfix/ui/uiforms/"
-    public init(uiNode:Node) {
-
+    private prefix: string = "assets/deer/assetshotfix/ui/uiforms/";
+    public init(uiNode: Node) {
         this.uinode = uiNode;
         director.addPersistRootNode(this.uinode);
-        let foreground = this.uinode?.getChildByName('foreground');
-        this.hudNode = this.uinode?.getChildByName("hudNode");        
+        let foreground = this.uinode?.getChildByName("foreground");
+        this.hudNode = this.uinode?.getChildByName("hudNode");
         if (this.uinode === undefined || this.uinode == null) {
             throw new Error(`can not find canvas ui root.`);
         }
 
         this.createrLayer();
         foreground?.setSiblingIndex(7);
-        this.uicamera = this.uinode?.getChildByName('Camera')?.getComponent(Camera)!;
-        this.splashNode = foreground?.getChildByName('splash');
+        this.uicamera = this.uinode?.getChildByName("Camera")?.getComponent(Camera)!;
+        this.splashNode = foreground?.getChildByName("splash");
 
         this._constView = ["UILoadingForm", "UIWaitForm"];
     }
 
     private createrLayer() {
-        Object.keys(UIFormLayer).forEach(key => {
+        Object.keys(UIFormLayer).forEach((key) => {
             let layer: Node = new Node();
-            let uilayer = layer.addComponent(UILayer)
+            let uilayer = layer.addComponent(UILayer);
             uilayer.init(key);
             this.uinode.addChild(layer);
             this._layers[key] = uilayer;
         });
     }
 
-    public get InfoLayer():Node{
+    public get InfoLayer(): Node {
         return this._layers[UIFormLayer.InfoLayer].node;
     }
 
     public OpenUIForm(formId: number, ...args: any[]) {
-
         let config: Uiform = Uiform.GetData(formId);
 
         if (!config) {
@@ -77,16 +77,15 @@ export class UIMgr extends BaseClass {
             return;
         }
 
-        this.OpenForm(formId,config.GetName(), config.GetUiGroupName(), args);
+        this.OpenForm(formId, config.GetName(), config.GetUiGroupName(), args);
     }
-    private OpenForm(formId:number,formName: string, layer: string, args: any[]) {
-        if(this._openingForms.indexOf(formName) > -1)
-            return;
+    private OpenForm(formId: number, formName: string, layer: string, args: any[]) {
+        if (this._openingForms.indexOf(formName) > -1) return;
         if (!this._uiForms[formName]) {
             this._openingForms.push(formName);
             this.load(formName, (form) => {
-                this._openingForms.splice(this._openingForms.indexOf(formName),1);
-                
+                this._openingForms.splice(this._openingForms.indexOf(formName), 1);
+
                 if (!form) {
                     Debugger.LogError(`界面打开失败：${formName}`);
                     return;
@@ -98,16 +97,15 @@ export class UIMgr extends BaseClass {
                 baseForm.OnOpen.apply(baseForm, args);
                 this._uiForms[formName] = baseForm;
             });
-        }
-        else {
+        } else {
             let baseForm = this._uiForms[formName];
-            baseForm.FormId=formId;
+            baseForm.FormId = formId;
             baseForm.OnOpen.apply(baseForm, args);
             this._layers[layer].node.addChild(baseForm.node);
         }
     }
 
-    public HasUIForm(formId:number):boolean{
+    public HasUIForm(formId: number): boolean {
         let config: Uiform = Uiform.GetData(formId);
 
         if (!config) {
@@ -117,23 +115,29 @@ export class UIMgr extends BaseClass {
         return this._uiForms[config.GetName()] != null;
     }
 
-    public addToSceneLayer(node:Node){
+    public addToSceneLayer(node: Node) {
         this._layers[UIFormLayer.SceneLayer].node.addChild(node);
     }
 
     public load(name: string, loadComplete: (view) => void) {
         if (!name) {
             loadComplete(null);
-            Debugger.warn("加载界面资源名称为空")
+            Debugger.warn("加载界面资源名称为空");
             return;
         }
 
-        ResAB.ins().loadResByAbName("ui", `uiforms/${name}`, (asset, userdata) => {
-            let form = instantiate(asset);
-            loadComplete(form);
-        }, (userdta) => {
-            Debugger.LogError("界面加载失败:" + name);
-        }, Prefab);
+        ResAB.ins().loadResByAbName(
+            "ui",
+            `uiforms/${name}`,
+            (asset, userdata) => {
+                let form = instantiate(asset);
+                loadComplete(form);
+            },
+            (userdta) => {
+                Debugger.LogError("界面加载失败:" + name);
+            },
+            Prefab
+        );
     }
 
     public updateUIForm(deltaTime: number) {
@@ -142,11 +146,11 @@ export class UIMgr extends BaseClass {
         }
     }
 
-    public CloseUIForm(val: number|UIBaseForm) {
-        let formId:number = -1;
-        if(typeof val == "number"){
+    public CloseUIForm(val: number | UIBaseForm) {
+        let formId: number = -1;
+        if (typeof val == "number") {
             formId = val as number;
-        }else{
+        } else {
             formId = (val as UIBaseForm).FormId;
         }
         let config: Uiform = Uiform.GetData(formId);
@@ -162,7 +166,7 @@ export class UIMgr extends BaseClass {
     //     this.closeUIForm(baseForm.FormId);
     // }
 
-    public GetInstanceRoot():Node{
+    public GetInstanceRoot(): Node {
         return this.uinode;
     }
 
@@ -180,7 +184,7 @@ export class UIMgr extends BaseClass {
     }
 
     private disposeForm(formName: string) {
-        if(null != this._uiForms[formName]){
+        if (null != this._uiForms[formName]) {
             this._uiForms[formName].node.destroy();
         }
         delete this._uiForms[formName];

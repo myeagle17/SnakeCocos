@@ -1,3 +1,5 @@
+/** @format */
+
 import { IProto } from "../../logic/Proto/Proto";
 import { Msg } from "../msg/msg";
 import Client from "./Client";
@@ -16,8 +18,7 @@ export default class Net {
 
     public static Connect(): void {
         if (!Net.IsInit) return;
-        Net.Client.Connect(
-            Net.OnMessage);
+        Net.Client.Connect(Net.OnMessage);
     }
 
     public static Send(id: string, data: any = null): void {
@@ -25,10 +26,9 @@ export default class Net {
         Net.Client.Send(JSON.stringify(proto));
     }
 
-    public static OnMessage(event: any): void {
-        console.log("receive event:" + event.data);
+    private static OnMessage(event: any): void {
+        // console.log("receive event:" + event.data);
         let proto: IProto = JSON.parse(event.data);
         Msg.emit(proto.ID, proto.Data);
     }
-
 }

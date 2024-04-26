@@ -2,12 +2,12 @@
   "ver": "1.1.49",
   "importer": "prefab",
   "imported": true,
-  "uuid": "bdd0beb5-302c-4bed-ad62-605762102849",
+  "uuid": "a2259859-9cd6-4fb9-b40d-9abd4c551371",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "uitipsform"
+    "syncNodeName": "player"
   }
 }

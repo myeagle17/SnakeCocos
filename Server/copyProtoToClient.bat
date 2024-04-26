@@ -1,2 +1,2 @@
-copy /y .\src\Proto\*.ts ..\CocosCreatorFrame-main\assets\scripts\logic\Proto\*.ts
+copy /y .\src\Proto\*.ts ..\Client\assets\scripts\logic\Proto\*.ts
 pause
